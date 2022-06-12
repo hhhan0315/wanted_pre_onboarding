@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B178BA285382AD00E1AB1D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B178B9285382AD00E1AB1D /* UILabel+Extension.swift */; };
+		01B178BC2853831200E1AB1D /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B178BB2853831200E1AB1D /* Double+Extension.swift */; };
+		01B178BE28538D3A00E1AB1D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B178BD28538D3A00E1AB1D /* Observable.swift */; };
+		01B178C028538F8E00E1AB1D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B178BF28538F8E00E1AB1D /* HomeViewModel.swift */; };
 		01E94D532852023E009C74EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D522852023E009C74EC /* AppDelegate.swift */; };
 		01E94D552852023E009C74EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D542852023E009C74EC /* SceneDelegate.swift */; };
-		01E94D572852023E009C74EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D562852023E009C74EC /* ViewController.swift */; };
+		01E94D572852023E009C74EC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D562852023E009C74EC /* HomeViewController.swift */; };
 		01E94D5C28520240009C74EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01E94D5B28520240009C74EC /* Assets.xcassets */; };
 		01E94D5F28520240009C74EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E94D5D28520240009C74EC /* LaunchScreen.storyboard */; };
+		01E94D6A28532FAA009C74EC /* DataRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D6928532FAA009C74EC /* DataRequestable.swift */; };
+		01E94D6C28532FD4009C74EC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D6B28532FD4009C74EC /* NetworkService.swift */; };
+		01E94D6E28532FF7009C74EC /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D6D28532FF7009C74EC /* WeatherRequest.swift */; };
+		01E94D7228537483009C74EC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D7128537483009C74EC /* HomeTableViewCell.swift */; };
+		01E94D7628537CDB009C74EC /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D7528537CDB009C74EC /* WeatherResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01B178B9285382AD00E1AB1D /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		01B178BB2853831200E1AB1D /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		01B178BD28538D3A00E1AB1D /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		01B178BF28538F8E00E1AB1D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		01E94D4F2852023E009C74EC /* wanted_pre_onboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wanted_pre_onboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E94D522852023E009C74EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01E94D542852023E009C74EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01E94D562852023E009C74EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01E94D562852023E009C74EC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		01E94D5B28520240009C74EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01E94D5E28520240009C74EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01E94D6028520240009C74EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E94D6928532FAA009C74EC /* DataRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestable.swift; sourceTree = "<group>"; };
+		01E94D6B28532FD4009C74EC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		01E94D6D28532FF7009C74EC /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
+		01E94D7128537483009C74EC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		01E94D7528537CDB009C74EC /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +74,10 @@
 			children = (
 				01E94D6628520315009C74EC /* Application */,
 				01E94D672852031C009C74EC /* Resource */,
-				01E94D562852023E009C74EC /* ViewController.swift */,
+				01E94D7428537CAD009C74EC /* Model */,
+				01E94D6F28533347009C74EC /* Presentation */,
+				01E94D6828532F8B009C74EC /* Network */,
+				01E94D7728538258009C74EC /* Utils */,
 				01E94D6028520240009C74EC /* Info.plist */,
 			);
 			path = wanted_pre_onboarding;
@@ -78,6 +99,52 @@
 				01E94D5B28520240009C74EC /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		01E94D6828532F8B009C74EC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				01E94D6928532FAA009C74EC /* DataRequestable.swift */,
+				01E94D6B28532FD4009C74EC /* NetworkService.swift */,
+				01E94D6D28532FF7009C74EC /* WeatherRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		01E94D6F28533347009C74EC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				01E94D702853746E009C74EC /* Cell */,
+				01E94D562852023E009C74EC /* HomeViewController.swift */,
+				01B178BF28538F8E00E1AB1D /* HomeViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		01E94D702853746E009C74EC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				01E94D7128537483009C74EC /* HomeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		01E94D7428537CAD009C74EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01E94D7528537CDB009C74EC /* WeatherResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01E94D7728538258009C74EC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				01B178B9285382AD00E1AB1D /* UILabel+Extension.swift */,
+				01B178BB2853831200E1AB1D /* Double+Extension.swift */,
+				01B178BD28538D3A00E1AB1D /* Observable.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +217,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E94D572852023E009C74EC /* ViewController.swift in Sources */,
+				01B178BE28538D3A00E1AB1D /* Observable.swift in Sources */,
+				01E94D7628537CDB009C74EC /* WeatherResponse.swift in Sources */,
+				01E94D7228537483009C74EC /* HomeTableViewCell.swift in Sources */,
+				01E94D6E28532FF7009C74EC /* WeatherRequest.swift in Sources */,
+				01E94D6C28532FD4009C74EC /* NetworkService.swift in Sources */,
+				01E94D572852023E009C74EC /* HomeViewController.swift in Sources */,
 				01E94D532852023E009C74EC /* AppDelegate.swift in Sources */,
+				01B178C028538F8E00E1AB1D /* HomeViewModel.swift in Sources */,
 				01E94D552852023E009C74EC /* SceneDelegate.swift in Sources */,
+				01E94D6A28532FAA009C74EC /* DataRequestable.swift in Sources */,
+				01B178BC2853831200E1AB1D /* Double+Extension.swift in Sources */,
+				01B178BA285382AD00E1AB1D /* UILabel+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
