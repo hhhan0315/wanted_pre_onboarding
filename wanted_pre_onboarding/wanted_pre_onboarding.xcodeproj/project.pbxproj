@@ -21,6 +21,7 @@
 		01E94D6E28532FF7009C74EC /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D6D28532FF7009C74EC /* WeatherRequest.swift */; };
 		01E94D7228537483009C74EC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D7128537483009C74EC /* HomeTableViewCell.swift */; };
 		01E94D7628537CDB009C74EC /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D7528537CDB009C74EC /* WeatherResponse.swift */; };
+		01FFDCC128561411007FBD01 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCC028561411007FBD01 /* Bundle+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		01E94D6D28532FF7009C74EC /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		01E94D7128537483009C74EC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		01E94D7528537CDB009C74EC /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		01FFDCC028561411007FBD01 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				01B178B9285382AD00E1AB1D /* UILabel+Extension.swift */,
 				01B178BB2853831200E1AB1D /* Double+Extension.swift */,
+				01FFDCC028561411007FBD01 /* Bundle+Extension.swift */,
 				01B178BD28538D3A00E1AB1D /* Observable.swift */,
 			);
 			path = Utils;
@@ -220,6 +223,7 @@
 				01B178BE28538D3A00E1AB1D /* Observable.swift in Sources */,
 				01E94D7628537CDB009C74EC /* WeatherResponse.swift in Sources */,
 				01E94D7228537483009C74EC /* HomeTableViewCell.swift in Sources */,
+				01FFDCC128561411007FBD01 /* Bundle+Extension.swift in Sources */,
 				01E94D6E28532FF7009C74EC /* WeatherRequest.swift in Sources */,
 				01E94D6C28532FD4009C74EC /* NetworkService.swift in Sources */,
 				01E94D572852023E009C74EC /* HomeViewController.swift in Sources */,
