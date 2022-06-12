@@ -8,7 +8,7 @@
 import Foundation
 
 struct WeatherRequest: DataRequestable {
-    private let apiKey = "5e5e6f8aeb40866917475875d86b54d6"
+    private let apiKey = Bundle.main.weatherApiKey
     private var cityName: String
     
     init(cityName: String) {
