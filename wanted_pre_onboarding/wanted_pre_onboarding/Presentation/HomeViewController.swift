@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
         case city
     }
     
-    typealias DataSource = UITableViewDiffableDataSource<Section, WeatherResponse>
+    typealias DataSource = UITableViewDiffableDataSource<Section, WeatherDTO>
     
     private var dataSource: DataSource?
     
@@ -91,7 +91,7 @@ private extension HomeViewController {
     
     func bind(to viewModel: HomeViewModel) {
         viewModel.weatherResponses.observe(on: self) { [weak self] weatherResponses in
-            var snapShot = NSDiffableDataSourceSnapshot<Section, WeatherResponse>()
+            var snapShot = NSDiffableDataSourceSnapshot<Section, WeatherDTO>()
             snapShot.appendSections([Section.city])
             snapShot.appendItems(weatherResponses)
             self?.dataSource?.apply(snapShot, animatingDifferences: false)

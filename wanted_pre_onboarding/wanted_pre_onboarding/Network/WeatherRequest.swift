@@ -21,16 +21,16 @@ struct WeatherRequest: DataRequestable {
     }
     
     var queryItems: [String : String] {
-        ["q": cityName, "appid": self.apiKey]
+        ["q": cityName, "appid": self.apiKey, "lang": "kr"]
     }
     
     var method: HTTPMethod {
         .get
     }
     
-    func decode(_ data: Data) throws -> WeatherResponse {
+    func decode(_ data: Data) throws -> WeatherDTO {
         let decoder = JSONDecoder()
-        let response = try decoder.decode(WeatherResponse.self, from: data)
+        let response = try decoder.decode(WeatherDTO.self, from: data)
         return response
     }
 }

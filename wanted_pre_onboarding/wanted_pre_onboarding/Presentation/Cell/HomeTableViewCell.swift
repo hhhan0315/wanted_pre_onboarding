@@ -10,7 +10,7 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
     static let identifier = String(describing: HomeTableViewCell.self)
     
-    var weatherResponse: WeatherResponse? {
+    var weatherResponse: WeatherDTO? {
         didSet {
             self.configureWeatherResponse()
         }

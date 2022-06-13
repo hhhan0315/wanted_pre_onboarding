@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var weatherResponse: WeatherResponse? {
+    var weatherResponse: WeatherDTO? {
         didSet {
             self.configureWeatherResponse()
         }
