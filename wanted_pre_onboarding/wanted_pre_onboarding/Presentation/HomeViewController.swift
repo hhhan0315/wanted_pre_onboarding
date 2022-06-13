@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
         let tableView = UITableView()
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
         tableView.tableFooterView = UIView()
-        tableView.rowHeight = 60
+        tableView.rowHeight = 80
         return tableView
     }()
     

@@ -18,7 +18,7 @@ class HomeTableViewCell: UITableViewCell {
     
     private let iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "square")
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -50,6 +50,15 @@ class HomeTableViewCell: UITableViewCell {
         return stackView
     }()
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.iconImageView.image = nil
+        self.cityNameLabel.text = nil
+        self.temperatureLabel.text = nil
+        self.humidityLabel.text = nil
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -80,6 +89,7 @@ private extension HomeTableViewCell {
             self.iconImageView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
             self.iconImageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
             self.iconImageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
+            self.iconImageView.widthAnchor.constraint(equalTo: self.contentView.widthAnchor, multiplier: 1/4),
             
             self.labelStackView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
             self.labelStackView.leadingAnchor.constraint(equalTo: self.iconImageView.trailingAnchor),
@@ -90,10 +100,9 @@ private extension HomeTableViewCell {
     
     func configureWeatherResponse() {
         guard let weatherResponse = weatherResponse else { return }
-        cityNameLabel.attributedTitle(firstPart: "도시이름", secondPart: weatherResponse.name)
-        temperatureLabel.attributedTitle(firstPart: "현재기온", secondPart: "\(weatherResponse.main.temp.convertToCelsiusString())º")
-        humidityLabel.attributedTitle(firstPart: "현재습도", secondPart: "\(weatherResponse.main.humidity ?? 0)%")
-                
-        // 아이콘 이미지 캐시 구현
+        self.cityNameLabel.attributedTitle(firstPart: "도시이름", secondPart: weatherResponse.name)
+        self.temperatureLabel.attributedTitle(firstPart: "현재기온", secondPart: "\(weatherResponse.main.temp.convertToCelsiusString())º")
+        self.humidityLabel.attributedTitle(firstPart: "현재습도", secondPart: "\(weatherResponse.main.humidity ?? 0)%")
+        self.iconImageView.setImageUrl(iconString: weatherResponse.weather.first?.icon ?? "")
     }
 }

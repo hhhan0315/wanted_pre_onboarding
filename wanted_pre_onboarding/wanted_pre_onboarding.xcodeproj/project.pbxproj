@@ -22,6 +22,10 @@
 		01E94D7228537483009C74EC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D7128537483009C74EC /* HomeTableViewCell.swift */; };
 		01E94D7628537CDB009C74EC /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D7528537CDB009C74EC /* WeatherResponse.swift */; };
 		01FFDCC128561411007FBD01 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCC028561411007FBD01 /* Bundle+Extension.swift */; };
+		01FFDCC328561496007FBD01 /* Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01FFDCC228561496007FBD01 /* Key.plist */; };
+		01FFDCC628561894007FBD01 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCC528561894007FBD01 /* ImageCacheManager.swift */; };
+		01FFDCC8285618AB007FBD01 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCC7285618AB007FBD01 /* ImageLoader.swift */; };
+		01FFDCCA2856D0AB007FBD01 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCC92856D0AA007FBD01 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		01E94D7128537483009C74EC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		01E94D7528537CDB009C74EC /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		01FFDCC028561411007FBD01 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		01FFDCC228561496007FBD01 /* Key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Key.plist; sourceTree = "<group>"; };
+		01FFDCC528561894007FBD01 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		01FFDCC7285618AB007FBD01 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		01FFDCC92856D0AA007FBD01 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 				01E94D6828532F8B009C74EC /* Network */,
 				01E94D7728538258009C74EC /* Utils */,
 				01E94D6028520240009C74EC /* Info.plist */,
+				01FFDCC228561496007FBD01 /* Key.plist */,
 			);
 			path = wanted_pre_onboarding;
 			sourceTree = "<group>";
@@ -142,12 +151,23 @@
 		01E94D7728538258009C74EC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				01FFDCC428561886007FBD01 /* Image */,
 				01B178B9285382AD00E1AB1D /* UILabel+Extension.swift */,
 				01B178BB2853831200E1AB1D /* Double+Extension.swift */,
 				01FFDCC028561411007FBD01 /* Bundle+Extension.swift */,
+				01FFDCC92856D0AA007FBD01 /* UIImageView+Extension.swift */,
 				01B178BD28538D3A00E1AB1D /* Observable.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		01FFDCC428561886007FBD01 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				01FFDCC528561894007FBD01 /* ImageCacheManager.swift */,
+				01FFDCC7285618AB007FBD01 /* ImageLoader.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +230,7 @@
 			files = (
 				01E94D5F28520240009C74EC /* LaunchScreen.storyboard in Resources */,
 				01E94D5C28520240009C74EC /* Assets.xcassets in Resources */,
+				01FFDCC328561496007FBD01 /* Key.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,12 +243,15 @@
 			files = (
 				01B178BE28538D3A00E1AB1D /* Observable.swift in Sources */,
 				01E94D7628537CDB009C74EC /* WeatherResponse.swift in Sources */,
+				01FFDCC8285618AB007FBD01 /* ImageLoader.swift in Sources */,
 				01E94D7228537483009C74EC /* HomeTableViewCell.swift in Sources */,
 				01FFDCC128561411007FBD01 /* Bundle+Extension.swift in Sources */,
 				01E94D6E28532FF7009C74EC /* WeatherRequest.swift in Sources */,
 				01E94D6C28532FD4009C74EC /* NetworkService.swift in Sources */,
 				01E94D572852023E009C74EC /* HomeViewController.swift in Sources */,
 				01E94D532852023E009C74EC /* AppDelegate.swift in Sources */,
+				01FFDCC628561894007FBD01 /* ImageCacheManager.swift in Sources */,
+				01FFDCCA2856D0AB007FBD01 /* UIImageView+Extension.swift in Sources */,
 				01B178C028538F8E00E1AB1D /* HomeViewModel.swift in Sources */,
 				01E94D552852023E009C74EC /* SceneDelegate.swift in Sources */,
 				01E94D6A28532FAA009C74EC /* DataRequestable.swift in Sources */,
