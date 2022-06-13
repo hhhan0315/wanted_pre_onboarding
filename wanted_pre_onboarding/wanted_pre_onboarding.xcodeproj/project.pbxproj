@@ -20,12 +20,15 @@
 		01E94D6C28532FD4009C74EC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D6B28532FD4009C74EC /* NetworkService.swift */; };
 		01E94D6E28532FF7009C74EC /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D6D28532FF7009C74EC /* WeatherRequest.swift */; };
 		01E94D7228537483009C74EC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D7128537483009C74EC /* HomeTableViewCell.swift */; };
-		01E94D7628537CDB009C74EC /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D7528537CDB009C74EC /* WeatherResponse.swift */; };
+		01E94D7628537CDB009C74EC /* WeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E94D7528537CDB009C74EC /* WeatherDTO.swift */; };
 		01FFDCC128561411007FBD01 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCC028561411007FBD01 /* Bundle+Extension.swift */; };
 		01FFDCC328561496007FBD01 /* Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01FFDCC228561496007FBD01 /* Key.plist */; };
 		01FFDCC628561894007FBD01 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCC528561894007FBD01 /* ImageCacheManager.swift */; };
 		01FFDCC8285618AB007FBD01 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCC7285618AB007FBD01 /* ImageLoader.swift */; };
 		01FFDCCA2856D0AB007FBD01 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCC92856D0AA007FBD01 /* UIImageView+Extension.swift */; };
+		01FFDCCE2856D537007FBD01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCCD2856D537007FBD01 /* DetailViewController.swift */; };
+		01FFDCD02856E3CE007FBD01 /* GeoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCCF2856E3CE007FBD01 /* GeoRequest.swift */; };
+		01FFDCD22856E424007FBD01 /* GeoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCD12856E424007FBD01 /* GeoDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,12 +47,15 @@
 		01E94D6B28532FD4009C74EC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		01E94D6D28532FF7009C74EC /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		01E94D7128537483009C74EC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		01E94D7528537CDB009C74EC /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		01E94D7528537CDB009C74EC /* WeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDTO.swift; sourceTree = "<group>"; };
 		01FFDCC028561411007FBD01 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		01FFDCC228561496007FBD01 /* Key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Key.plist; sourceTree = "<group>"; };
 		01FFDCC528561894007FBD01 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		01FFDCC7285618AB007FBD01 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		01FFDCC92856D0AA007FBD01 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		01FFDCCD2856D537007FBD01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		01FFDCCF2856E3CE007FBD01 /* GeoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoRequest.swift; sourceTree = "<group>"; };
+		01FFDCD12856E424007FBD01 /* GeoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 				01E94D6928532FAA009C74EC /* DataRequestable.swift */,
 				01E94D6B28532FD4009C74EC /* NetworkService.swift */,
 				01E94D6D28532FF7009C74EC /* WeatherRequest.swift */,
+				01FFDCCF2856E3CE007FBD01 /* GeoRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 				01E94D702853746E009C74EC /* Cell */,
 				01E94D562852023E009C74EC /* HomeViewController.swift */,
 				01B178BF28538F8E00E1AB1D /* HomeViewModel.swift */,
+				01FFDCCD2856D537007FBD01 /* DetailViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -143,7 +151,8 @@
 		01E94D7428537CAD009C74EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				01E94D7528537CDB009C74EC /* WeatherResponse.swift */,
+				01E94D7528537CDB009C74EC /* WeatherDTO.swift */,
+				01FFDCD12856E424007FBD01 /* GeoDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,11 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B178BE28538D3A00E1AB1D /* Observable.swift in Sources */,
-				01E94D7628537CDB009C74EC /* WeatherResponse.swift in Sources */,
+				01FFDCCE2856D537007FBD01 /* DetailViewController.swift in Sources */,
+				01E94D7628537CDB009C74EC /* WeatherDTO.swift in Sources */,
 				01FFDCC8285618AB007FBD01 /* ImageLoader.swift in Sources */,
 				01E94D7228537483009C74EC /* HomeTableViewCell.swift in Sources */,
 				01FFDCC128561411007FBD01 /* Bundle+Extension.swift in Sources */,
 				01E94D6E28532FF7009C74EC /* WeatherRequest.swift in Sources */,
+				01FFDCD02856E3CE007FBD01 /* GeoRequest.swift in Sources */,
 				01E94D6C28532FD4009C74EC /* NetworkService.swift in Sources */,
 				01E94D572852023E009C74EC /* HomeViewController.swift in Sources */,
 				01E94D532852023E009C74EC /* AppDelegate.swift in Sources */,
@@ -257,6 +268,7 @@
 				01E94D6A28532FAA009C74EC /* DataRequestable.swift in Sources */,
 				01B178BC2853831200E1AB1D /* Double+Extension.swift in Sources */,
 				01B178BA285382AD00E1AB1D /* UILabel+Extension.swift in Sources */,
+				01FFDCD22856E424007FBD01 /* GeoDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
