@@ -102,7 +102,7 @@ private extension HomeTableViewCell {
         guard let weatherResponse = weatherResponse else { return }
         self.cityNameLabel.attributedTitle(firstPart: "도시이름", secondPart: weatherResponse.name)
         self.temperatureLabel.attributedTitle(firstPart: "현재기온", secondPart: "\(weatherResponse.main.temp.convertToCelsiusString())º")
-        self.humidityLabel.attributedTitle(firstPart: "현재습도", secondPart: "\(weatherResponse.main.humidity ?? 0)%")
+        self.humidityLabel.attributedTitle(firstPart: "현재습도", secondPart: "\(weatherResponse.main.humidity)%")
         self.iconImageView.setImageUrl(iconString: weatherResponse.weather.first?.icon ?? "")
     }
 }

@@ -44,11 +44,14 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - Private Extension
+
 private extension HomeViewController {
     func configure() {
         self.addSubViews()
         self.makeConstraints()
         self.configureNavigationItem()
+        self.configureDelegate()
         self.configureDataSource()
         self.bind(to: self.viewModel)
     }
@@ -72,6 +75,10 @@ private extension HomeViewController {
         self.navigationItem.title = "날씨 정보"
     }
     
+    func configureDelegate() {
+        self.tableView.delegate = self
+    }
+    
     func configureDataSource() {
         self.dataSource = DataSource(tableView: self.tableView, cellProvider: { tableView, indexPath, weatherResponse in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell else {
@@ -90,4 +97,16 @@ private extension HomeViewController {
             self?.dataSource?.apply(snapShot, animatingDifferences: false)
         }
     }
+}
+
+// MARK: - UITableViewDelegate
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController()
+        let weatherResponse = self.dataSource?.itemIdentifier(for: indexPath)
+        detailViewController.weatherResponse = weatherResponse
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }    
 }
