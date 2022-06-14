@@ -5,6 +5,15 @@ Open Weather API 활용
 ## 버전
 - iOS 13.0
 
+## Diagram
+![Diagram](https://github.com/hhhan0315/wanted_pre_onboarding/blob/main/스크린샷/diagram.png)
+
+## 구조
+![구조](https://github.com/hhhan0315/wanted_pre_onboarding/blob/main/스크린샷/구조.png)
+
+## 기능
+![기능](https://github.com/hhhan0315/wanted_pre_onboarding/blob/main/스크린샷/기능.gif)
+
 ## 커밋 메시지
 - Convention
   - [Feat] : 기능 추가 / 새로운 로직
