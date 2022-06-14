@@ -18,6 +18,7 @@ Open Weather API 활용
 - MVVM 구조를 사용했으며 Observable을 활용해 View와 ViewController 간의 Data Binding
 - UITableViewDiffableDataSource을 활용해 화면 1 테이블뷰 구현
 - GeoCoding API 호출 -> 해당 lat, lon으로 Current Weather Data Call -> WeatherModel 구현
+- NSCache를 활용해 이미지 캐시 구현
 
 ## 커밋 메시지
 - Convention
