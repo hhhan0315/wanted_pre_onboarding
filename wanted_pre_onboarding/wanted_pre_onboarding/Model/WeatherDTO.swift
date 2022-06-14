@@ -7,21 +7,13 @@
 
 import Foundation
 
-struct WeatherDTO: Codable, Hashable, Equatable {
+struct WeatherDTO: Codable {
     let coord: Coord
     let weather: [Weather]
     let main: Main
     let wind: Wind
     let name: String
     let id: Int
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-    
-    static func == (lhs: WeatherDTO, rhs: WeatherDTO) -> Bool {
-        return lhs.id == rhs.id
-    }
 }
 
 struct Coord: Codable {
