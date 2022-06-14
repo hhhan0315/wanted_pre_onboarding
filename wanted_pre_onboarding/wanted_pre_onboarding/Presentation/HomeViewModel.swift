@@ -25,20 +25,21 @@ class HomeViewModel {
                 switch result {
                 case .success(let geoDTOs):
                     guard let geoDTO = geoDTOs.first else { return }
-                    
+
                     let weatherRequest = WeatherRequest(lat: geoDTO.lat, lon: geoDTO.lon)
                     self.networkService.request(weatherRequest) { (result: Result<WeatherDTO, NetworkError>) in
                         switch result {
                         case .success(let weatherDTO):
-                            
-                            let newModel = WeatherModel(koreanName: geoDTO.localNames.ko, weatherDTO: weatherDTO)
-                            self.weatherModels.value.append(newModel)
-                            
+
+                            let weatherModel = WeatherModel(koreanName: geoDTO.localNames.ko, weatherDTO: weatherDTO)
+                            self.weatherModels.value.append(weatherModel)
+                            self.weatherModels.value.sort {$0.koreanName < $1.koreanName}
+
                         case .failure(let error):
                             print("weatherError: \(error)")
                         }
                     }
-                    
+
                 case .failure(let error):
                     print("geoError: \(error)")
                 }
