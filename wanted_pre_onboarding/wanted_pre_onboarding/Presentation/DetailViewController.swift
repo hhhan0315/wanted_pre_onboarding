@@ -9,9 +9,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var weatherResponse: WeatherDTO? {
+    var weatherModel: WeatherModel? {
         didSet {
-            self.configureWeatherResponse()
+            self.configureWeatherModel()
         }
     }
     
@@ -151,21 +151,21 @@ private extension DetailViewController {
         ])
     }
     
-    func configureWeatherResponse() {
-        guard let weatherResponse = self.weatherResponse else { return }
-        self.navigationItem.title = weatherResponse.name
-        self.iconImageView.setImageUrl(iconString: weatherResponse.weather.first?.icon ?? "")
+    func configureWeatherModel() {
+        guard let weatherModel = self.weatherModel else { return }
+        self.navigationItem.title = weatherModel.koreanName
+        self.iconImageView.setImageUrl(iconString: weatherModel.icon)
         
-        self.cityNameLabel.attributedTitle(firstPart: "도시이름", secondPart: weatherResponse.name)
-        self.currentTempLabel.attributedTitle(firstPart: "현재기온", secondPart: "\(weatherResponse.main.temp.convertToCelsiusString())º")
-        self.feelsLikeTempLabel.attributedTitle(firstPart: "체감기온", secondPart: "\(weatherResponse.main.feelsLike.convertToCelsiusString())º")
+        self.cityNameLabel.attributedTitle(firstPart: "도시이름", secondPart: weatherModel.koreanName)
+        self.currentTempLabel.attributedTitle(firstPart: "현재기온", secondPart: "\(weatherModel.temperature)º")
+        self.feelsLikeTempLabel.attributedTitle(firstPart: "체감기온", secondPart: "\(weatherModel.feelsLikeTemperature)º")
         
-        self.humidityLabel.attributedTitle(firstPart: "현재습도", secondPart: "\(weatherResponse.main.humidity)%")
-        self.minTempLabel.attributedTitle(firstPart: "최저기온", secondPart: "\(weatherResponse.main.tempMin.convertToCelsiusString())º")
-        self.maxTempLabel.attributedTitle(firstPart: "최고기온", secondPart: "\(weatherResponse.main.tempMax.convertToCelsiusString())º")
+        self.humidityLabel.attributedTitle(firstPart: "현재습도", secondPart: "\(weatherModel.humidity)%")
+        self.minTempLabel.attributedTitle(firstPart: "최저기온", secondPart: "\(weatherModel.minTemperature)º")
+        self.maxTempLabel.attributedTitle(firstPart: "최고기온", secondPart: "\(weatherModel.maxTemperature)º")
         
-        self.pressureLabel.attributedTitle(firstPart: "기압", secondPart: "\(weatherResponse.main.pressure)hPa")
-        self.windSpeedLabel.attributedTitle(firstPart: "풍속", secondPart: "\(weatherResponse.wind.speed)m/s")
-        self.weatherDescLabel.attributedTitle(firstPart: "날씨설명", secondPart: weatherResponse.weather.first?.description ?? "")
+        self.pressureLabel.attributedTitle(firstPart: "기압", secondPart: "\(weatherModel.pressure)hPa")
+        self.windSpeedLabel.attributedTitle(firstPart: "풍속", secondPart: "\(weatherModel.windSpeed)m/s")
+        self.weatherDescLabel.attributedTitle(firstPart: "날씨설명", secondPart: weatherModel.description)
     }
 }

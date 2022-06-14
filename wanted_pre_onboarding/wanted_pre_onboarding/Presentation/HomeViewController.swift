@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
         case city
     }
     
-    typealias DataSource = UITableViewDiffableDataSource<Section, WeatherDTO>
+    typealias DataSource = UITableViewDiffableDataSource<Section, WeatherModel>
     
     private var dataSource: DataSource?
     
@@ -57,6 +57,7 @@ private extension HomeViewController {
     }
     
     func addSubViews() {
+        self.view.backgroundColor = .white
         self.view.addSubview(self.tableView)
     }
     
@@ -80,20 +81,20 @@ private extension HomeViewController {
     }
     
     func configureDataSource() {
-        self.dataSource = DataSource(tableView: self.tableView, cellProvider: { tableView, indexPath, weatherResponse in
+        self.dataSource = DataSource(tableView: self.tableView, cellProvider: { tableView, indexPath, weatherModel in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell else {
                 return HomeTableViewCell()
             }
-            cell.weatherResponse = weatherResponse
+            cell.weatherModel = weatherModel
             return cell
         })
     }
     
     func bind(to viewModel: HomeViewModel) {
-        viewModel.weatherResponses.observe(on: self) { [weak self] weatherResponses in
-            var snapShot = NSDiffableDataSourceSnapshot<Section, WeatherDTO>()
+        viewModel.weatherModels.observe(on: self) { [weak self] weatherModels in
+            var snapShot = NSDiffableDataSourceSnapshot<Section, WeatherModel>()
             snapShot.appendSections([Section.city])
-            snapShot.appendItems(weatherResponses)
+            snapShot.appendItems(weatherModels)
             self?.dataSource?.apply(snapShot, animatingDifferences: false)
         }
     }
@@ -104,8 +105,8 @@ private extension HomeViewController {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
-        let weatherResponse = self.dataSource?.itemIdentifier(for: indexPath)
-        detailViewController.weatherResponse = weatherResponse
+        let weatherModel = self.dataSource?.itemIdentifier(for: indexPath)
+        detailViewController.weatherModel = weatherModel
         self.navigationController?.pushViewController(detailViewController, animated: true)
         self.tableView.deselectRow(at: indexPath, animated: true)
     }    

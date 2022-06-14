@@ -29,6 +29,7 @@
 		01FFDCCE2856D537007FBD01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCCD2856D537007FBD01 /* DetailViewController.swift */; };
 		01FFDCD02856E3CE007FBD01 /* GeoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCCF2856E3CE007FBD01 /* GeoRequest.swift */; };
 		01FFDCD22856E424007FBD01 /* GeoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCD12856E424007FBD01 /* GeoDTO.swift */; };
+		01FFDCD4285710DB007FBD01 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FFDCD3285710DB007FBD01 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		01FFDCCD2856D537007FBD01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		01FFDCCF2856E3CE007FBD01 /* GeoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoRequest.swift; sourceTree = "<group>"; };
 		01FFDCD12856E424007FBD01 /* GeoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDTO.swift; sourceTree = "<group>"; };
+		01FFDCD3285710DB007FBD01 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				01E94D7528537CDB009C74EC /* WeatherDTO.swift */,
 				01FFDCD12856E424007FBD01 /* GeoDTO.swift */,
+				01FFDCD3285710DB007FBD01 /* WeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				01FFDCCE2856D537007FBD01 /* DetailViewController.swift in Sources */,
 				01E94D7628537CDB009C74EC /* WeatherDTO.swift in Sources */,
 				01FFDCC8285618AB007FBD01 /* ImageLoader.swift in Sources */,
+				01FFDCD4285710DB007FBD01 /* WeatherModel.swift in Sources */,
 				01E94D7228537483009C74EC /* HomeTableViewCell.swift in Sources */,
 				01FFDCC128561411007FBD01 /* Bundle+Extension.swift in Sources */,
 				01E94D6E28532FF7009C74EC /* WeatherRequest.swift in Sources */,

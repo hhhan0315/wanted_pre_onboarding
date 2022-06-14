@@ -8,24 +8,39 @@
 import Foundation
 
 class HomeViewModel {
-    private(set) var weatherResponses: Observable<[WeatherDTO]>
+    private(set) var weatherModels: Observable<[WeatherModel]>
+    
     private let cityNames = ["Gongju", "Gwangju", "Gumi", "Gunsan", "Daegu", "Daejeon", "Mokpo", "Busan", "Seosan", "Seoul", "Sokcho", "Suwon", "Suncheon", "Ulsan", "Iksan", "Jeonju", "Jeju", "Cheonan", "Cheongju-si", "Chuncheon"]
     private let networkService: NetworkService
     
     init() {
-        self.weatherResponses = Observable([])
+        self.weatherModels = Observable([])
         self.networkService = NetworkService()
     }
     
     func fetch() {
         cityNames.forEach { cityName in
-            let request = WeatherRequest(cityName: cityName)
-            self.networkService.request(request) { (result: Result<WeatherDTO, NetworkError>) in
+            let request = GeoRequest(cityName: cityName)
+            self.networkService.request(request) { (result: Result<[GeoDTO], NetworkError>) in
                 switch result {
-                case .success(let weatherResponse):
-                    self.weatherResponses.value.append(weatherResponse)
+                case .success(let geoDTOs):
+                    guard let geoDTO = geoDTOs.first else { return }
+                    
+                    let weatherRequest = WeatherRequest(lat: geoDTO.lat, lon: geoDTO.lon)
+                    self.networkService.request(weatherRequest) { (result: Result<WeatherDTO, NetworkError>) in
+                        switch result {
+                        case .success(let weatherDTO):
+                            
+                            let newModel = WeatherModel(koreanName: geoDTO.localNames.ko, weatherDTO: weatherDTO)
+                            self.weatherModels.value.append(newModel)
+                            
+                        case .failure(let error):
+                            print("weatherError: \(error)")
+                        }
+                    }
+                    
                 case .failure(let error):
-                    print(error)
+                    print("geoError: \(error)")
                 }
             }
         }

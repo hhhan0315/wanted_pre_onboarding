@@ -10,9 +10,9 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
     static let identifier = String(describing: HomeTableViewCell.self)
     
-    var weatherResponse: WeatherDTO? {
+    var weatherModel: WeatherModel? {
         didSet {
-            self.configureWeatherResponse()
+            self.configureWeatherModel()
         }
     }
     
@@ -98,11 +98,11 @@ private extension HomeTableViewCell {
         ])
     }
     
-    func configureWeatherResponse() {
-        guard let weatherResponse = weatherResponse else { return }
-        self.cityNameLabel.attributedTitle(firstPart: "도시이름", secondPart: weatherResponse.name)
-        self.temperatureLabel.attributedTitle(firstPart: "현재기온", secondPart: "\(weatherResponse.main.temp.convertToCelsiusString())º")
-        self.humidityLabel.attributedTitle(firstPart: "현재습도", secondPart: "\(weatherResponse.main.humidity)%")
-        self.iconImageView.setImageUrl(iconString: weatherResponse.weather.first?.icon ?? "")
+    func configureWeatherModel() {
+        guard let weatherModel = weatherModel else { return }
+        self.cityNameLabel.attributedTitle(firstPart: "도시이름", secondPart: weatherModel.koreanName)
+        self.temperatureLabel.attributedTitle(firstPart: "현재기온", secondPart: "\(weatherModel.temperature)º")
+        self.humidityLabel.attributedTitle(firstPart: "현재습도", secondPart: "\(weatherModel.humidity)%")
+        self.iconImageView.setImageUrl(iconString: weatherModel.icon)
     }
 }
