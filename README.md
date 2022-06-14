@@ -14,6 +14,11 @@ Open Weather API 활용
 ## 기능
 ![기능](https://github.com/hhhan0315/wanted_pre_onboarding/blob/main/스크린샷/기능.gif)
 
+## 설명
+- MVVM 구조를 사용했으며 Observable을 활용해 View와 ViewController 간의 Data Binding
+- UITableViewDiffableDataSource을 활용해 화면 1 테이블뷰 구현
+- GeoCoding API 호출 -> 해당 lat, lon으로 Current Weather Data Call -> WeatherModel 구현
+
 ## 커밋 메시지
 - Convention
   - [Feat] : 기능 추가 / 새로운 로직
