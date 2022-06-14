@@ -1,5 +1,6 @@
 # wanted_pre_onboarding
-Open Weather API를 활용한 날씨 정보 앱
+원티드 프리온보딩 iOS 코스 사전 과제 (날씨 정보 APP)
+Open Weather API 활용
 
 ## 버전
 - iOS 13.0
