@@ -28,9 +28,9 @@ struct GeoRequest: DataRequestable {
         .get
     }
     
-    func decode(_ data: Data) throws -> GeoDTO {
+    func decode(_ data: Data) throws -> [GeoDTO] {
         let decoder = JSONDecoder()
-        let response = try decoder.decode(GeoDTO.self, from: data)
+        let response = try decoder.decode([GeoDTO].self, from: data)
         return response
     }
 }

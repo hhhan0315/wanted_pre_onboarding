@@ -9,10 +9,12 @@ import Foundation
 
 struct WeatherRequest: DataRequestable {
     private let apiKey = Bundle.main.weatherApiKey
-    private var cityName: String
+    private var lat: Double
+    private var lon: Double
     
-    init(cityName: String) {
-        self.cityName = cityName
+    init(lat: Double, lon: Double) {
+        self.lat = lat
+        self.lon = lon
     }
     
     var url: String {
@@ -21,7 +23,7 @@ struct WeatherRequest: DataRequestable {
     }
     
     var queryItems: [String : String] {
-        ["q": cityName, "appid": self.apiKey, "lang": "kr"]
+        ["lat": "\(lat)", "lon": "\(lon)", "appid": self.apiKey, "lang": "kr"]
     }
     
     var method: HTTPMethod {
