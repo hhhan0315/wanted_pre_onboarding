@@ -89,4 +89,5 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-key.plist
+# API KEY
+Key.plist
