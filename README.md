@@ -5,6 +5,9 @@ Open Weather API 활용
 ## 버전
 - iOS 13.0
 
+## 시작
+- Key.plist 생성 및 OPENWEATHER_API_KEY 이름 설정 및 API Key 넣기
+
 ## Diagram
 ![Diagram](https://github.com/hhhan0315/wanted_pre_onboarding/blob/main/스크린샷/diagram.png)
 
